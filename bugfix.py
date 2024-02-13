@@ -23,5 +23,4 @@ select2.add_slot(
 )
 
 
-
 ui.run()
