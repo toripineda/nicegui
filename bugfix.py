@@ -12,14 +12,16 @@ with select1.add_slot("selected"):
 
 #  need to click on the chip twice for the options panel to appear
 select2 = ui.select(list("ab"))
+
 select2.add_slot(
     "selected",
     r"""
 <q-chip>
   <div>{{ 'a' }}</div>
-</q-chip>
+  </q-chip>
 """,
 )
+
 
 
 ui.run()

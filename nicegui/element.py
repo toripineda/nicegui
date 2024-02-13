@@ -165,6 +165,7 @@ class Element(Visibility):
         :param template: Vue template of the slot
         :return: the slot
         """
+       
         # tried using "default" instead of name to mimic the effect of using "with" expression
         self.slots['default'] = Slot(self, name, template)
         return self.slots['default']

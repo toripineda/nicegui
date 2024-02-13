@@ -9,6 +9,7 @@ from nicegui.testing import Screen
 
 def test_select(screen: Screen):
     ui.select(['A', 'B', 'C'], value='A')
+    ui.select(list("ab")).add_slot
 
     screen.open('/')
     screen.should_contain('A')

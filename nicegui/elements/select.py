@@ -48,6 +48,7 @@ class Select(ValidationElement, ChoiceElement, DisableableElement, component='se
         :param clearable: whether to add a button to clear the selection
         :param validation: dictionary of validation rules or a callable that returns an optional error message
         """
+        
         self.multiple = multiple
         if multiple:
             if value is None:
@@ -70,6 +71,7 @@ class Select(ValidationElement, ChoiceElement, DisableableElement, component='se
             self._props['input-debounce'] = 0
         self._props['multiple'] = multiple
         self._props['clearable'] = clearable
+        
 
     def _event_args_to_value(self, e: GenericEventArguments) -> Any:
         # pylint: disable=no-else-return
