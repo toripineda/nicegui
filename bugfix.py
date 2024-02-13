@@ -6,7 +6,7 @@ ui.button('BUTTON', on_click=lambda: ui.notify('button was pressed'))
 # When chip is clicked, the options panel is displayed normally
 select1 = ui.select(list("ab"), value="a")
 with select1.add_slot("selected"):
-    #with ui.element("q-chip"):
+    with ui.element("q-chip"):
         ui.label("a")
 
 
@@ -16,9 +16,9 @@ select2 = ui.select(list("ab"))
 select2.add_slot(
     "selected",
     r"""
-
+<q-chip>
   <div>{{ 'a' }}</div>
-
+  </q-chip>
 """,
 )
 

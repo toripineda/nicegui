@@ -166,7 +166,11 @@ class Element(Visibility):
         :return: the slot
         """
         
+        
         self.slots[name] = Slot(self, name, template)
+        # tried using the enter function to mimic "with" expression; shows up as a blank screen
+        self.slots['default'].__enter__()
+
         return self.slots[name]
 
     def __enter__(self) -> Self:
